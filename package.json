@@ -21,9 +21,17 @@
     "commands": [
       {
         "command": "copy-as-list.copyAsList",
-        "title": "Copy as List"
+        "title": "Copy as Json List"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "copy-as-list.copyAsList",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
